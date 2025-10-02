@@ -27,7 +27,6 @@ import androidx.preference.PreferenceManager;
 
 import org.lineageos.settings.doze.DozeUtils;
 import org.lineageos.settings.thermal.ThermalUtils;
-import org.lineageos.settings.refreshrate.RefreshUtils;
 import org.lineageos.settings.utils.FileUtils;
 
 public class BootCompletedReceiver extends BroadcastReceiver {
@@ -45,8 +44,7 @@ public class BootCompletedReceiver extends BroadcastReceiver {
             Log.d(TAG, "Received boot completed intent");
         DozeUtils.onBootCompleted(context);
         ThermalUtils.startService(context);
-        RefreshUtils.startService(context);    
-        
+
         // Touch Sampling
         boolean HTSREnabled = sharedPrefs.getBoolean(HTSR_ENABLE_KEY, false);
         FileUtils.writeLine(HTSR_FILE, HTSREnabled ? "1" : "0");
