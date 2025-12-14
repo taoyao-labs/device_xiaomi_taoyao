@@ -388,6 +388,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.xiaomi-multihal \
     citsensorservice_shim \
+    libprocessgroup_shim \
     wfdservice_shim
 
 PRODUCT_COPY_FILES += \

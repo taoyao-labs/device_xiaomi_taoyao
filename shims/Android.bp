@@ -16,3 +16,9 @@ cc_library {
     srcs: ["wfdservice.c"],
     vendor: true,
 }
+
+cc_library {
+    name: "libprocessgroup_shim",
+    srcs: ["processgroup.cpp"],
+    vendor: true,
+}
