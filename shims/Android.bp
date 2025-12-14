@@ -7,9 +7,12 @@
 cc_library {
     name: "citsensorservice_shim",
     srcs: ["citsensorservice.c"],
+    vendor: true,
+    stem: "citsensorservice_shim",
 }
 
 cc_library {
     name: "wfdservice_shim",
     srcs: ["wfdservice.c"],
+    vendor: true,
 }
