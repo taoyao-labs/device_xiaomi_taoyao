@@ -125,10 +125,15 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libcodec2_hidl_plugin.so', 'libcodec2_hidl_plugin_sp.so')
         .replace_needed('libcodec2_vndk.so', 'libcodec2_vndk_sp.so'),
     'odm/lib64/libui_sp.so': blob_fixup()
-        .replace_needed('android.hardware.graphics.common-V3-ndk.so', 'android.hardware.graphics.common-V7-ndk.so')
+        .replace_needed('android.hardware.graphics.common-V6-ndk.so', 'android.hardware.graphics.common-V7-ndk.so')
         .replace_needed('android.hardware.graphics.allocator-V1-ndk.so', 'android.hardware.graphics.allocator-V2-ndk.so'),
     # Dolby END
     (
+        'vendor/lib64/android.hardware.camera.provider@2.4-external.so',
+        'vendor/lib64/hw/android.hardware.camera.provider@2.4-impl.so',
+        'vendor/lib64/camera.device@3.4-external-impl.so',
+        'vendor/lib64/camera.device@3.5-external-impl.so',
+        'vendor/lib64/camera.device@3.6-external-impl.so',
         'vendor/lib64/libdpps.so',
         'vendor/lib64/libsnapdragoncolor-manager.so',
     ): blob_fixup()
