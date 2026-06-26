@@ -1,4 +1,2 @@
-allow init adsprpcd_file:file mounton;
-
 # input_suspend label
 allow init sysfs_battery_supply:file rw_file_perms;

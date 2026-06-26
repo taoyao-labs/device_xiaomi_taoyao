@@ -5,18 +5,13 @@
 
 soong_namespace {
     imports: [
+        "device/xiaomi/sm8350-common",
         "hardware/xiaomi",
         "hardware/google/interfaces",
         "hardware/google/pixel",
         "hardware/lineage/interfaces/power-libperfmgr",
+        "vendor/xiaomi/sm8350-common",
     ],
-}
-
-install_symlink {
-    name: "firmware_WCNSS_qcom_cfg.ini_symlink",
-    vendor: true,
-    installed_location: "firmware/wlan/qca_cld/WCNSS_qcom_cfg.ini",
-    symlink_target: "/vendor/etc/wifi/WCNSS_qcom_cfg.ini",
 }
 
 install_symlink {
